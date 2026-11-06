@@ -1,0 +1,44 @@
+[
+  {
+    "ariaLabel": null,
+    "ariaLabelledby": null,
+    "html": "<input name=\"name\" tabindex=\"1\" id=\"member-name\" class=\"gh-input-x ember-text-field gh-input ember-view\" data-test-input=\"member-name\" type=\"text\">",
+    "id": "member-name",
+    "labels": [
+      "Name"
+    ],
+    "title": "",
+    "type": "text"
+  },
+  {
+    "ariaLabel": null,
+    "ariaLabelledby": null,
+    "html": "<input name=\"email\" autocomplete=\"off\" tabindex=\"2\" autocorrect=\"off\" autocapitalize=\"off\" id=\"member-email\" class=\"gh-input-x ember-text-field gh-input ember-view\" data-test-input=\"member-email\" type=\"text\">",
+    "id": "member-email",
+    "labels": [
+      "Email"
+    ],
+    "title": "",
+    "type": "text"
+  },
+  {
+    "ariaLabel": null,
+    "ariaLabelledby": null,
+    "html": "<input class=\"ember-power-select-trigger-multiple-input\" autocomplete=\"off\" autocorrect=\"off\" autocapitalize=\"off\" spellcheck=\"false\" id=\"ember-power-select-trigger-multiple-input-ember639\" aria-controls=\"ember-power-select-options-ember639\" style=\"width: 100%;\" placeholder=\"\" type=\"search\">",
+    "id": "ember-power-select-trigger-multiple-input-ember639",
+    "labels": [],
+    "title": "",
+    "type": "search"
+  },
+  {
+    "ariaLabel": null,
+    "ariaLabelledby": null,
+    "html": "<input name=\"subscribed\" id=\"6aee21eeac644d0001fcbac1-checkbox\" class=\"ember-checkbox ember-view\" data-test-checkbox=\"member-subscribed\" type=\"checkbox\">",
+    "id": "6aee21eeac644d0001fcbac1-checkbox",
+    "labels": [
+      ""
+    ],
+    "title": "",
+    "type": "checkbox"
+  }
+]

@@ -1,0 +1,9 @@
+{
+  "ariaLabel": null,
+  "ariaLabelledby": null,
+  "html": "<button type=\"button\" role=\"switch\" aria-checked=\"false\" data-state=\"unchecked\" value=\"on\" class=\"data-[state=checked]:bg-black dark:data-[state=checked]:bg-green appearance-none rounded-full bg-grey-300 transition duration-100 dark:bg-grey-800 enabled:hover:cursor-pointer disabled:cursor-not-allowed disabled:opacity-40 enabled:group-hover:opacity-80  min-w-[28px] h-4 w-7  order-2\" id=\":r6c:\"><span data-state=\"unchecked\" class=\" h-3 w-3 data-[state=checked]:translate-x-[14px] block translate-x-0.5 rounded-full bg-white transition-transform duration-100 will-change-transform\"></span></button>",
+  "labels": [],
+  "role": "switch",
+  "text": "",
+  "title": ""
+}

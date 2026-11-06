@@ -1,0 +1,112 @@
+[
+  {
+    "ariaLabel": null,
+    "ariaLabelledby": null,
+    "html": "<button data-test-button=\"publish-save\" disabled=\"\" id=\"ember582\" class=\"gh-btn gh-btn-editor gh-editor-save-trigger green ember-view\"><!---->\n        <span data-test-task-button-state=\"idle\">\n<!---->            Update\n        </span>\n\n\n<!----><!----></button>",
+    "id": "ember582",
+    "labels": [],
+    "role": null,
+    "tag": "BUTTON",
+    "text": "Update",
+    "title": "",
+    "type": "submit"
+  },
+  {
+    "ariaLabel": null,
+    "ariaLabelledby": null,
+    "html": "<button class=\"gh-btn gh-btn-editor darkgrey gh-unpublish-trigger\" data-test-button=\"update-flow\" type=\"button\">\n                <span>\n                    Unpublish\n                </span>\n            </button>",
+    "id": "",
+    "labels": [],
+    "role": null,
+    "tag": "BUTTON",
+    "text": "Unpublish",
+    "title": "",
+    "type": "button"
+  },
+  {
+    "ariaLabel": null,
+    "ariaLabelledby": null,
+    "html": "<button class=\"gh-editor-feature-image-add-button\" type=\"button\"><svg viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M8 1v14M1 8h14\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"></path></svg><span>Add feature image</span></button>",
+    "id": "",
+    "labels": [],
+    "role": null,
+    "tag": "BUTTON",
+    "text": "Add feature image",
+    "title": "",
+    "type": "button"
+  },
+  {
+    "ariaLabel": null,
+    "ariaLabelledby": null,
+    "html": "<button class=\"gh-editor-feature-image-unsplash\" type=\"button\"><svg viewBox=\"0 0 122.43 122.41\" fill=\"currentColor\"><path d=\"M83.86 54.15v34.13H38.57V54.15H0v68.26h122.43V54.15H83.86zM38.57 0h45.3v34.13h-45.3z\"></path></svg></button>",
+    "id": "",
+    "labels": [],
+    "role": null,
+    "tag": "BUTTON",
+    "text": "",
+    "title": "",
+    "type": "button"
+  },
+  {
+    "ariaLabel": null,
+    "ariaLabelledby": null,
+    "html": "<input id=\"fileInput-ember584\" class=\"x-file--input\" accept=\"image/gif,image/jpg,image/jpeg,image/png,image/svg+xml,image/webp\" type=\"file\">",
+    "id": "fileInput-ember584",
+    "labels": [
+      "Upload"
+    ],
+    "role": null,
+    "tag": "INPUT",
+    "text": "",
+    "title": "",
+    "type": "file"
+  },
+  {
+    "ariaLabel": null,
+    "ariaLabelledby": null,
+    "html": "<textarea tabindex=\"1\" placeholder=\"Post title\" id=\"ember585\" class=\"gh-editor-title  ember-text-area gh-input ember-view\" data-test-editor-title-input=\"\" style=\"resize: none; height: 83px;\"></textarea>",
+    "id": "ember585",
+    "labels": [],
+    "role": null,
+    "tag": "TEXTAREA",
+    "text": "",
+    "title": "",
+    "type": "textarea"
+  },
+  {
+    "ariaLabel": null,
+    "ariaLabelledby": null,
+    "html": "<button data-test-button=\"publish-save\" disabled=\"\" id=\"ember586\" class=\"gh-btn gh-btn-editor gh-editor-save-trigger green ember-view\"><!---->\n        <span data-test-task-button-state=\"idle\">\n<!---->            Update\n        </span>\n\n\n<!----><!----></button>",
+    "id": "ember586",
+    "labels": [],
+    "role": null,
+    "tag": "BUTTON",
+    "text": "Update",
+    "title": "",
+    "type": "submit"
+  },
+  {
+    "ariaLabel": null,
+    "ariaLabelledby": null,
+    "html": "<button class=\"gh-btn gh-btn-editor darkgrey gh-unpublish-trigger\" data-test-button=\"update-flow\" type=\"button\">\n                <span>\n                    Unpublish\n                </span>\n            </button>",
+    "id": "",
+    "labels": [],
+    "role": null,
+    "tag": "BUTTON",
+    "text": "Unpublish",
+    "title": "",
+    "type": "button"
+  },
+  {
+    "ariaLabel": null,
+    "ariaLabelledby": null,
+    "html": "<button class=\"settings-menu-toggle gh-btn gh-btn-editor gh-btn-icon icon-only gh-btn-action-icon\" title=\"Settings\" data-test-psm-trigger=\"\" type=\"button\">\n            <span><svg fill=\"none\" viewBox=\"0 0 24 24\"><path d=\"M21 2.5H3c-.828 0-1.5.608-1.5 1.357v16.286c0 .75.672 1.357 1.5 1.357h18c.828 0 1.5-.608 1.5-1.357V3.857c0-.75-.672-1.357-1.5-1.357zm-4.5 0v19\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg></span>\n    </button>",
+    "id": "",
+    "labels": [],
+    "role": null,
+    "tag": "BUTTON",
+    "text": "",
+    "title": "Settings",
+    "type": "button"
+  }
+]

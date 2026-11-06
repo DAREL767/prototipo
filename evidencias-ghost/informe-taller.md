@@ -1,72 +1,153 @@
-# Taller de pruebas exploratorias — Ghost 5.130.2
+# Taller Ghost — formatos diligenciados
 
-Fecha: 6 de noviembre de 2026. Entorno: Windows, Docker Desktop, imagen ghost:5.130.2, SQLite en modo development, tema Source v1.5.0. Aplicación en http://localhost:2368. Mailpit local configurado para correo transaccional. Navegador integrado de Codex (Chromium); no se realizó una matriz de navegadores.
+Fecha de pruebas y revalidación: 6 de noviembre de 2026. Ghost 5.130.2, Docker, SQLite development, tema Source 1.5.0. Tester: Codex (prueba asistida); el estudiante organiza y entrega el PDF.
 
-## Alcance y método
+## Funcionalidades
 
-Exploración de edición, publicación, páginas, etiquetas, miembros, menús, búsqueda y configuración. Se crearon datos ficticios y contenido de prueba. Las observaciones se verificaron mediante interacción con la interfaz, árbol de accesibilidad e inspección de atributos del DOM. No se ejecutaron pruebas con NVDA/JAWS ni una auditoría completa de conformidad WCAG.
-
-Se registran 10 hallazgos localizados de accesibilidad. Varios comparten la causa de etiquetas no asociadas a controles; una revisión del profesor podría agruparlos en menos defectos. No equivalen a 10 fallos funcionales independientes. No se reportan como errores los casos que Ghost rechazó o normalizó correctamente.
-
-## Tabla 1. Funcionalidades identificadas
-
-| ID | Funcionalidad | Procedimiento y resultado observado |
+| ID | Funcionalidad | Descripción |
 |---|---|---|
-| F01 | Acceso administrativo y verificación | El usuario completó el acceso en otro navegador mediante la configuración de correo local. Se verificó después el panel autenticado. |
-| F02 | Crear y editar artículos | Posts > New post. Se introdujo título y contenido en el editor. |
-| F03 | Guardar borradores automáticamente | Se observó Saving y después Draft - Saved; el registro obtuvo una URL de edición propia. |
-| F04 | Publicar artículos | Publish > Continue, final review > Publish post, right now. Se confirmó Published y el enlace al artículo. |
-| F05 | Previsualizar contenido | Preview abrió el panel con opciones Web, Email y enlace de vista previa. Se comprobó la apertura del panel, no la entrega de una newsletter. |
-| F06 | Resumen personalizado | Post settings > Excerpt. Se guardó un resumen que apareció en la confirmación y en el listado público. |
-| F07 | Metadatos SEO | Post settings > Meta data. Se introdujeron título y descripción SEO; no se comprobó indexación por buscadores. |
-| F08 | Asociar etiquetas a artículos | Se creó/asignó Pruebas desde Post settings. El listado mostró el artículo clasificado bajo esa etiqueta. |
-| F09 | Administrar etiquetas | Tags > New tag. Se creó una etiqueta, se guardaron descripción y color válido; nombre en blanco y color zzzzzz fueron rechazados. |
-| F10 | Crear y publicar páginas | Pages > New page. Se publicó Acerca del taller. El slug reservado ghost fue normalizado a ghost-post. |
-| F11 | Registrar miembros | Members > New member. Se guardó Miembro de prueba con dirección ficticia y apareció en el listado. Un correo mal formado fue rechazado. |
-| F12 | Notas internas de miembros | Se guardó una nota identificada como no visible para el miembro. La nota seguía presente al volver a abrir su ficha. No se comprobó una sesión del miembro. |
-| F13 | Configurar navegación | Settings > Navigation. Se añadió Taller apuntando a /ghost-post/ y se verificó el enlace en el sitio público. |
-| F14 | Filtrar artículos por estado | Se abrió Published; aparecieron las publicaciones con ese estado. |
-| F15 | Buscar contenido | Search site > bienvenida. La búsqueda devolvió el artículo de prueba. |
+| F01 | Acceso administrativo | Permite ingresar con correo y contraseña, con verificación por correo cuando corresponde. |
+| F02 | Edición de artículos | Permite crear y modificar título, contenido, autores y opciones del artículo. |
+| F03 | Guardado automático de borradores | Conserva los cambios del contenido sin publicarlo. |
+| F04 | Publicación de contenido | Permite publicar contenido y establecer su fecha y hora. |
+| F05 | Previsualización | Permite abrir una vista previa del contenido antes de publicarlo. |
+| F06 | Resumen y metadatos SEO | Permite definir resumen, título SEO y descripción para buscadores. |
+| F07 | Clasificación de artículos | Permite asociar etiquetas para organizar artículos. |
+| F08 | Administración de etiquetas | Permite crear y editar nombre, slug, descripción y color de etiquetas. |
+| F09 | Administración de páginas | Permite crear, editar y publicar páginas estáticas. |
+| F10 | Administración de miembros | Permite registrar miembros y gestionar datos, etiquetas, notas y suscripciones. |
+| F11 | Configuración de navegación | Permite agregar y modificar enlaces de los menús. |
+| F12 | Filtrado de publicaciones | Permite consultar publicaciones según su estado. |
+| F13 | Búsqueda de contenido | Permite localizar artículos mediante palabras clave. |
+| F14 | Configuración de seguridad del personal | Incluye la opción de exigir códigos 2FA en los accesos del personal. |
+| F15 | Configuración de newsletters | Incluye la activación de funciones de boletines y su configuración. |
 
-Evidencias visuales: [01-publicacion.png](https://github.com/DAREL767/prototipo/blob/evidencias-ghost/evidencias-ghost/01-publicacion.png), [02-miembro.png](https://github.com/DAREL767/prototipo/blob/evidencias-ghost/evidencias-ghost/02-miembro.png), [04-navegacion.png](https://github.com/DAREL767/prototipo/blob/evidencias-ghost/evidencias-ghost/04-navegacion.png), [06-ajustes-articulo.png](https://github.com/DAREL767/prototipo/blob/evidencias-ghost/evidencias-ghost/06-ajustes-articulo.png), [07-busqueda.png](https://github.com/DAREL767/prototipo/blob/evidencias-ghost/evidencias-ghost/07-busqueda.png) y [09-sitio-publico.png](https://github.com/DAREL767/prototipo/blob/evidencias-ghost/evidencias-ghost/09-sitio-publico.png).
+F01 fue completada por el usuario y el panel autenticado se verificó después. F14 y F15 se identificaron e inspeccionaron sin modificar sus interruptores. F05 verifica apertura del panel de vista previa, no envío de newsletters. El resto corresponde a operaciones realizadas en la exploración descrita.
 
-## Tabla 2. Hallazgos de accesibilidad
+## Defectos / hallazgos de accesibilidad
 
-Precondición común: sesión de administrador iniciada en la instalación descrita. Resultado esperado común: cada control debe tener un nombre accesible que comunique su propósito, además del rol y estado. El texto cercano en pantalla por sí solo no crea una asociación programática. Referencia: WCAG 2.2, criterio 4.1.2, https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html.
+Diez hallazgos localizados, todos de accesibilidad. Varios comparten causa; no se afirman diez fallos funcionales independientes. Verificados mediante DOM y árbol de accesibilidad, sin prueba con NVDA/JAWS. Severidad propuesta: media.
 
-Severidad propuesta: media para todos estos hallazgos, por dificultar tareas con tecnologías de asistencia; debe ajustarse según la rúbrica. Estado: reproducido en inspección DOM/árbol de accesibilidad; pendiente validación con lector de pantalla real.
-
-| ID | Título | Pasos | Resultado observado | Resultado esperado específico | Evidencia |
+| ID | Fecha | Autor/Tester | ID Funcionalidad evaluada | Error encontrado | Link a la evidencia (Video o Screenshot) |
 |---|---|---|---|---|---|
-| D01 | Botón de Unsplash sin nombre accesible | Abrir un artículo; inspeccionar el botón del icono junto a Add feature image. | El botón gh-editor-feature-image-unsplash contiene solo un SVG sin texto alternativo; no tiene aria-label, aria-labelledby ni title. En el árbol aparece como botón sin nombre. | Nombre como Buscar imagen en Unsplash. | [05-editor-controles.json](https://github.com/DAREL767/prototipo/blob/evidencias-ghost/evidencias-ghost/05-editor-controles.json) |
-| D02 | Campos de fecha y hora sin identificación accesible | Abrir un artículo > Settings > Publish date; inspeccionar ambos inputs. | La fecha solo tiene placeholder YYYY-MM-DD; la hora no tiene etiqueta asociada, aria-label ni aria-labelledby. El árbol muestra valores de fecha/hora sin propósito descriptivo. | Etiquetas Fecha de publicación y Hora de publicación asociadas a cada campo. | [06-ajustes-articulo.json](https://github.com/DAREL767/prototipo/blob/evidencias-ghost/evidencias-ghost/06-ajustes-articulo.json) y PNG |
-| D03 | Búsquedas de etiquetas y autores sin etiqueta accesible | Artículo > Settings > Tags y Authors; inspeccionar los campos de búsqueda internos. | Ambos inputs de búsqueda carecen de label asociado y de atributos de nombre accesible; sus IDs son identificadores generados. | Identificar Buscar etiquetas y Buscar autores. | [06-ajustes-articulo.json](https://github.com/DAREL767/prototipo/blob/evidencias-ghost/evidencias-ghost/06-ajustes-articulo.json) |
-| D04 | Selector Post access sin nombre accesible | Artículo > Settings > Post access; inspeccionar el select. | Hay texto Post access en pantalla, pero el select no tiene label asociado ni aria-label/aria-labelledby. El árbol muestra el valor Public sin identificar el propósito. | Asociar el texto Post access al selector. | [06-ajustes-articulo.json](https://github.com/DAREL767/prototipo/blob/evidencias-ghost/evidencias-ghost/06-ajustes-articulo.json) y PNG |
-| D05 | Casilla Feature this post sin nombre accesible | Artículo > Settings; localizar Feature this post e inspeccionar el checkbox. | El checkbox no tiene id, etiqueta asociada ni atributos ARIA de nombre. El árbol expone una casilla sin nombre. | Nombre como Destacar este artículo. | [06-ajustes-articulo.json](https://github.com/DAREL767/prototipo/blob/evidencias-ghost/evidencias-ghost/06-ajustes-articulo.json) |
-| D06 | Campo Labels de miembros sin nombre accesible | Members > abrir Miembro de prueba > Labels; inspeccionar el campo de búsqueda. | El input no tiene etiqueta asociada ni atributos de nombre accesible, pese a tener el texto Labels cerca. | Nombre como Buscar etiquetas del miembro. | [08-miembro-controles.json](https://github.com/DAREL767/prototipo/blob/evidencias-ghost/evidencias-ghost/08-miembro-controles.json) |
-| D07 | Casilla de suscripción del miembro con etiqueta vacía | Members > abrir Miembro de prueba > Newsletters; inspeccionar la casilla del boletín. | Tiene un label asociado, pero su contenido es solo espacios y no dispone de nombre ARIA. No comunica el nombre del boletín. | Nombre como Suscribir al boletín Taller Ghost. | [08-miembro-controles.json](https://github.com/DAREL767/prototipo/blob/evidencias-ghost/evidencias-ghost/08-miembro-controles.json) |
-| D08 | Botones de papelera del menú sin nombre accesible | Settings > Navigation > Customize; inspeccionar las papeleras de Home, About y Taller. No es necesario eliminarlos. | Botones formados por SVG de papelera y span vacío; no tienen title, aria-label ni aria-labelledby. El árbol muestra botones sin nombre. | Nombres como Eliminar enlace Home, diferenciando cada fila. | [04-navegacion-controles.json](https://github.com/DAREL767/prototipo/blob/evidencias-ghost/evidencias-ghost/04-navegacion-controles.json) y PNG |
-| D09 | Interruptor de verificación de acceso sin nombre accesible | Settings > Staff > Security settings; inspeccionar el switch sin cambiarlo. | Expone role=switch y aria-checked, pero no nombre accesible: no tiene texto, label asociado, title ni nombre ARIA. | Nombre como Exigir códigos 2FA en todos los accesos del personal. | [03-ajustes-controles.json](https://github.com/DAREL767/prototipo/blob/evidencias-ghost/evidencias-ghost/03-ajustes-controles.json) |
-| D10 | Interruptor de newsletters sin nombre accesible | Settings > Email newsletter > Newsletter sending; inspeccionar el switch sin cambiarlo. | Expone rol y estado, pero no tiene nombre accesible; el texto del apartado no está asociado al botón. | Nombre como Habilitar envío de newsletters. | [03-ajustes-controles.json](https://github.com/DAREL767/prototipo/blob/evidencias-ghost/evidencias-ghost/03-ajustes-controles.json) |
+| D01 | 06/11/2026 | Codex (prueba asistida) | F02 | El botón contiene únicamente un SVG sin alternativa textual. No tiene texto, title, aria-label ni aria-labelledby. | [Screenshot de la ficha de evidencia](https://github.com/DAREL767/prototipo/blob/evidencias-ghost/evidencias-ghost/verificacion/D01.png) · [JSON fuente](https://github.com/DAREL767/prototipo/blob/evidencias-ghost/evidencias-ghost/verificacion/editor.json) |
+| D02 | 06/11/2026 | Codex (prueba asistida) | F04 | La fecha solo tiene un placeholder de formato; la hora carece de nombre. Ninguno tiene label asociado ni nombre ARIA. | [Screenshot de la ficha de evidencia](https://github.com/DAREL767/prototipo/blob/evidencias-ghost/evidencias-ghost/verificacion/D02.png) · [JSON fuente](https://github.com/DAREL767/prototipo/blob/evidencias-ghost/evidencias-ghost/verificacion/articulo.json) |
+| D03 | 06/11/2026 | Codex (prueba asistida) | F02, F07 | Ambos inputs tienen identificadores generados, pero no label asociado, title ni atributos ARIA de nombre. | [Screenshot de la ficha de evidencia](https://github.com/DAREL767/prototipo/blob/evidencias-ghost/evidencias-ghost/verificacion/D03.png) · [JSON fuente](https://github.com/DAREL767/prototipo/blob/evidencias-ghost/evidencias-ghost/verificacion/articulo.json) |
+| D04 | 06/11/2026 | Codex (prueba asistida) | F02 | El selector muestra Public, pero no tiene etiqueta asociada ni atributos ARIA que identifiquen su propósito. | [Screenshot de la ficha de evidencia](https://github.com/DAREL767/prototipo/blob/evidencias-ghost/evidencias-ghost/verificacion/D04.png) · [JSON fuente](https://github.com/DAREL767/prototipo/blob/evidencias-ghost/evidencias-ghost/verificacion/articulo.json) |
+| D05 | 06/11/2026 | Codex (prueba asistida) | F02 | La casilla no tiene id, label asociado, title ni atributos ARIA de nombre. El estado sí está disponible. | [Screenshot de la ficha de evidencia](https://github.com/DAREL767/prototipo/blob/evidencias-ghost/evidencias-ghost/verificacion/D05.png) · [JSON fuente](https://github.com/DAREL767/prototipo/blob/evidencias-ghost/evidencias-ghost/verificacion/articulo.json) |
+| D06 | 06/11/2026 | Codex (prueba asistida) | F10 | El input de búsqueda no tiene label asociado ni atributos ARIA de nombre, pese al texto Labels cercano. | [Screenshot de la ficha de evidencia](https://github.com/DAREL767/prototipo/blob/evidencias-ghost/evidencias-ghost/verificacion/D06.png) · [JSON fuente](https://github.com/DAREL767/prototipo/blob/evidencias-ghost/evidencias-ghost/verificacion/miembro.json) |
+| D07 | 06/11/2026 | Codex (prueba asistida) | F10 | El label asociado solo contiene espacios: al normalizarlo queda vacío. No existe un nombre ARIA alternativo. | [Screenshot de la ficha de evidencia](https://github.com/DAREL767/prototipo/blob/evidencias-ghost/evidencias-ghost/verificacion/D07.png) · [JSON fuente](https://github.com/DAREL767/prototipo/blob/evidencias-ghost/evidencias-ghost/verificacion/miembro.json) |
+| D08 | 06/11/2026 | Codex (prueba asistida) | F11 | Los botones tienen iconos SVG y span vacío, sin texto accesible, title ni atributos ARIA de nombre. | [Screenshot de la ficha de evidencia](https://github.com/DAREL767/prototipo/blob/evidencias-ghost/evidencias-ghost/verificacion/D08.png) · [JSON fuente](https://github.com/DAREL767/prototipo/blob/evidencias-ghost/evidencias-ghost/verificacion/navegacion.json) |
+| D09 | 06/11/2026 | Codex (prueba asistida) | F14 | El control expone role=switch y aria-checked, pero no texto, label asociado, title ni atributos ARIA de nombre. | [Screenshot de la ficha de evidencia](https://github.com/DAREL767/prototipo/blob/evidencias-ghost/evidencias-ghost/verificacion/D09.png) · [JSON fuente](https://github.com/DAREL767/prototipo/blob/evidencias-ghost/evidencias-ghost/verificacion/seguridad.json) |
+| D10 | 06/11/2026 | Codex (prueba asistida) | F15 | El control expone rol y estado, pero el nombre de la sección no está asociado y no tiene otro nombre programático. | [Screenshot de la ficha de evidencia](https://github.com/DAREL767/prototipo/blob/evidencias-ghost/evidencias-ghost/verificacion/D10.png) · [JSON fuente](https://github.com/DAREL767/prototipo/blob/evidencias-ghost/evidencias-ghost/verificacion/newsletter.json) |
 
-La solución general consiste en asociar etiquetas visibles mediante label/for o aria-labelledby; en botones de iconos, añadir texto accesible o aria-label. Se debe verificar después el árbol de accesibilidad y el comportamiento con un lector de pantalla. No se modificó el código de Ghost para corregir los hallazgos.
+Cada PNG es una captura de una ficha de evidencia, identificada como tal: reúne captura original de Ghost y datos literales del DOM. No pretende ser una captura del inspector. Los HTML fuente y las capturas originales se publican en la misma carpeta para revisar la procedencia.
 
-## Pruebas con comportamiento correcto
+## Reproducción y resultados esperados
 
-- Una etiqueta con nombre formado solo por espacios mostró You must specify a name for the tag.
-- El color zzzzzz mostró The colour should be in valid hex format; 227755 sí se guardó.
-- El correo correo-invalido mostró Invalid Email; la dirección ficticia válida sí se guardó.
-- La ruta reservada ghost se normalizó a ghost-post y la página se publicó.
-- Una nueva fila de navegación con etiqueta formada solo por espacios no quedó en el menú público.
-- El artículo publicado apareció en búsqueda y en el filtro Published.
+### D01 — Botón de Unsplash sin nombre accesible
 
-## Incidencia del entorno
+**Pasos:** Posts → abrir el artículo de prueba → localizar el icono de Unsplash junto a Add feature image.
 
-Failed to send email apareció durante el acceso desde otro navegador sin SMTP configurado. Se añadió Mailpit y el usuario completó el acceso. Se clasifica como incidencia de configuración, no como defecto confirmado del CMS. Mailpit recibe correo transaccional de prueba; no sustituye la configuración de Mailgun requerida para newsletters masivas.
+**Observado:** El botón contiene únicamente un SVG sin alternativa textual. No tiene texto, title, aria-label ni aria-labelledby.
 
-## Diagrama de dominio conceptual
+**Esperado:** El botón debe identificarse como Buscar imagen en Unsplash.
 
-Inferido de las pantallas exploradas; no representa una extracción del esquema real de la base de datos. Se incluyen atributos y relaciones, sin métodos. Contenido representa artículos y páginas mediante el atributo tipo. Suscripcion modela la relación entre miembros y boletines.
+[Ver screenshot](https://github.com/DAREL767/prototipo/blob/evidencias-ghost/evidencias-ghost/verificacion/D01.png).
+
+### D02 — Fecha y hora de publicación sin etiquetas accesibles
+
+**Pasos:** Artículo → Settings → Publish date → inspeccionar los campos de fecha y hora.
+
+**Observado:** La fecha solo tiene un placeholder de formato; la hora carece de nombre. Ninguno tiene label asociado ni nombre ARIA.
+
+**Esperado:** Cada campo debe identificarse con su propósito: Fecha de publicación u Hora de publicación.
+
+[Ver screenshot](https://github.com/DAREL767/prototipo/blob/evidencias-ghost/evidencias-ghost/verificacion/D02.png).
+
+### D03 — Búsquedas de etiquetas y autores sin etiquetas accesibles
+
+**Pasos:** Artículo → Settings → Tags y Authors → inspeccionar los inputs internos de búsqueda.
+
+**Observado:** Ambos inputs tienen identificadores generados, pero no label asociado, title ni atributos ARIA de nombre.
+
+**Esperado:** Los campos deben identificarse como Buscar etiquetas y Buscar autores.
+
+[Ver screenshot](https://github.com/DAREL767/prototipo/blob/evidencias-ghost/evidencias-ghost/verificacion/D03.png).
+
+### D04 — Selector Post access sin nombre accesible
+
+**Pasos:** Artículo → Settings → Post access → inspeccionar el selector.
+
+**Observado:** El selector muestra Public, pero no tiene etiqueta asociada ni atributos ARIA que identifiquen su propósito.
+
+**Esperado:** El texto Post access debe estar asociado programáticamente al selector.
+
+[Ver screenshot](https://github.com/DAREL767/prototipo/blob/evidencias-ghost/evidencias-ghost/verificacion/D04.png).
+
+### D05 — Casilla Feature this post sin nombre accesible
+
+**Pasos:** Artículo → Settings → desplazarse hasta Feature this post → inspeccionar la casilla.
+
+**Observado:** La casilla no tiene id, label asociado, title ni atributos ARIA de nombre. El estado sí está disponible.
+
+**Esperado:** La casilla debe identificarse como Destacar este artículo.
+
+[Ver screenshot](https://github.com/DAREL767/prototipo/blob/evidencias-ghost/evidencias-ghost/verificacion/D05.png).
+
+### D06 — Campo Labels del miembro sin nombre accesible
+
+**Pasos:** Members → Miembro de prueba → desplazarse hasta Labels → inspeccionar el input de búsqueda.
+
+**Observado:** El input de búsqueda no tiene label asociado ni atributos ARIA de nombre, pese al texto Labels cercano.
+
+**Esperado:** El campo debe identificarse como Buscar etiquetas del miembro.
+
+[Ver screenshot](https://github.com/DAREL767/prototipo/blob/evidencias-ghost/evidencias-ghost/verificacion/D06.png).
+
+### D07 — Casilla de suscripción del miembro con etiqueta vacía
+
+**Pasos:** Members → Miembro de prueba → Newsletters → inspeccionar la casilla de Taller Ghost.
+
+**Observado:** El label asociado solo contiene espacios: al normalizarlo queda vacío. No existe un nombre ARIA alternativo.
+
+**Esperado:** La casilla debe identificarse como Suscribir al boletín Taller Ghost.
+
+[Ver screenshot](https://github.com/DAREL767/prototipo/blob/evidencias-ghost/evidencias-ghost/verificacion/D07.png).
+
+### D08 — Papeleras de navegación sin nombre accesible
+
+**Pasos:** Settings → buscar Navigation → Customize → inspeccionar las papeleras de los enlaces, sin eliminarlos.
+
+**Observado:** Los botones tienen iconos SVG y span vacío, sin texto accesible, title ni atributos ARIA de nombre.
+
+**Esperado:** Cada botón debe identificar su acción y fila: por ejemplo Eliminar enlace Home.
+
+[Ver screenshot](https://github.com/DAREL767/prototipo/blob/evidencias-ghost/evidencias-ghost/verificacion/D08.png).
+
+### D09 — Interruptor de verificación de acceso sin nombre accesible
+
+**Pasos:** Settings → buscar Staff → Security settings → inspeccionar el switch, sin cambiarlo.
+
+**Observado:** El control expone role=switch y aria-checked, pero no texto, label asociado, title ni atributos ARIA de nombre.
+
+**Esperado:** El interruptor debe identificarse como Exigir códigos 2FA en todos los accesos del personal.
+
+[Ver screenshot](https://github.com/DAREL767/prototipo/blob/evidencias-ghost/evidencias-ghost/verificacion/D09.png).
+
+### D10 — Interruptor Newsletter sending sin nombre accesible
+
+**Pasos:** Settings → buscar Newsletter sending → inspeccionar el switch, sin cambiarlo.
+
+**Observado:** El control expone rol y estado, pero el nombre de la sección no está asociado y no tiene otro nombre programático.
+
+**Esperado:** El interruptor debe identificarse como Habilitar envío de newsletters.
+
+[Ver screenshot](https://github.com/DAREL767/prototipo/blob/evidencias-ghost/evidencias-ghost/verificacion/D10.png).
+
+## Diagrama de dominio
+
+Modelo conceptual inferido de las pantallas; no es una extracción de la base de datos. Solo incluye atributos y relaciones.
 
 ```mermaid
 classDiagram
@@ -130,8 +211,10 @@ classDiagram
     Sitio "1" -- "0..*" EnlaceNavegacion : organiza
 ```
 
-## Evidencias y pendiente del entregable
+## Casos que funcionaron correctamente
 
-Las capturas y los archivos JSON se publicaron en el repositorio público DAREL767/prototipo, rama evidencias-ghost. Índice: https://github.com/DAREL767/prototipo/blob/evidencias-ghost/evidencias-ghost/README.md. Los enlaces de las tablas apuntan a esas evidencias públicas. La aplicación Ghost continúa siendo local: localhost no es una URL de evidencia pública.
+Nombre de etiqueta en blanco, color hexadecimal inválido y correo mal formado fueron rechazados. El slug reservado ghost se normalizó a ghost-post. La búsqueda devolvió el artículo creado y el filtro Published lo mostró correctamente. El error inicial de correo se clasificó como configuración del entorno.
 
-Las capturas prueban el contexto visual. Los JSON conservan los atributos observados que sustentan los hallazgos de accesibilidad; una captura sola no demuestra la ausencia de un nombre programático. Los TXT incrementales del árbol no se incluyeron en la publicación; los JSON contienen los atributos que sustentan los hallazgos.
+## Referencia
+
+https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html

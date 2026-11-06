@@ -1,88 +1,119 @@
-# Evidencias públicas — Taller Ghost 5.130.2
+# Evidencias del taller Ghost 5.130.2
 
-Pruebas del 6 de noviembre de 2026. Entorno local Docker y tema Source v1.5.0.
+[**Tablas con el formato solicitado y diagrama de dominio**](formatos-diligenciados.md) · [Informe](informe-taller.md)
 
-[Informe completo: funcionalidades, pasos de reproducción y diagrama de dominio](informe-taller.md).
+Fecha: 6 de noviembre de 2026. Tester: Codex (prueba asistida). Entorno: Ghost 5.130.2 en Docker, SQLite development, tema Source 1.5.0.
 
-Los 10 hallazgos corresponden a accesibilidad: varios comparten la ausencia de nombres programáticos. No son 10 fallos funcionales independientes. La validación usó DOM y árbol de accesibilidad; no se probó NVDA/JAWS. Las capturas muestran contexto, mientras los JSON sustentan los atributos de los controles.
+## Evidencias visuales por hallazgo
 
-## Capturas
+Cada enlace abre un PNG que reúne una captura original de Ghost y los atributos observados del control. Son fichas de evidencia elaboradas, identificadas como tales; no capturas del inspector del navegador. Se incluyen los originales y los JSON para revisar la procedencia.
 
-- [01-publicacion.png](01-publicacion.png)
-- [02-miembro.png](02-miembro.png)
-- [04-navegacion.png](04-navegacion.png)
-- [06-ajustes-articulo.png](06-ajustes-articulo.png)
-- [07-busqueda.png](07-busqueda.png)
-- [09-sitio-publico.png](09-sitio-publico.png)
+| ID | Hallazgo | Screenshot | Fuente técnica |
+|---|---|---|---|
+| D01 | Botón de Unsplash sin nombre accesible | [Ver imagen](verificacion/D01.png) | [JSON](verificacion/editor.json) |
+| D02 | Fecha y hora de publicación sin etiquetas accesibles | [Ver imagen](verificacion/D02.png) | [JSON](verificacion/articulo.json) |
+| D03 | Búsquedas de etiquetas y autores sin etiquetas accesibles | [Ver imagen](verificacion/D03.png) | [JSON](verificacion/articulo.json) |
+| D04 | Selector Post access sin nombre accesible | [Ver imagen](verificacion/D04.png) | [JSON](verificacion/articulo.json) |
+| D05 | Casilla Feature this post sin nombre accesible | [Ver imagen](verificacion/D05.png) | [JSON](verificacion/articulo.json) |
+| D06 | Campo Labels del miembro sin nombre accesible | [Ver imagen](verificacion/D06.png) | [JSON](verificacion/miembro.json) |
+| D07 | Casilla de suscripción del miembro con etiqueta vacía | [Ver imagen](verificacion/D07.png) | [JSON](verificacion/miembro.json) |
+| D08 | Papeleras de navegación sin nombre accesible | [Ver imagen](verificacion/D08.png) | [JSON](verificacion/navegacion.json) |
+| D09 | Interruptor de verificación de acceso sin nombre accesible | [Ver imagen](verificacion/D09.png) | [JSON](verificacion/seguridad.json) |
+| D10 | Interruptor Newsletter sending sin nombre accesible | [Ver imagen](verificacion/D10.png) | [JSON](verificacion/newsletter.json) |
 
-## Evidencias por hallazgo
+Los diez registros son hallazgos de accesibilidad; varios comparten la causa de etiquetas no asociadas. No se afirman diez fallos funcionales independientes. Se usó inspección del DOM y árbol de accesibilidad; no se probó con NVDA/JAWS ni se realizó una auditoría completa de conformidad.
+
+## Archivos originales
+
+- [articulo-autores.png](verificacion/articulo-autores.png)
+- [articulo-inferior.png](verificacion/articulo-inferior.png)
+- [articulo-superior.png](verificacion/articulo-superior.png)
+- [editor.png](verificacion/editor.png)
+- [miembro.png](verificacion/miembro.png)
+- [navegacion.png](verificacion/navegacion.png)
+- [newsletter.png](verificacion/newsletter.png)
+- [seguridad.png](verificacion/seguridad.png)
+
+## Fichas completas
 
 ### D01
 
-**Botón de Unsplash sin nombre accesible.**
+**Botón de Unsplash sin nombre accesible**
 
-[Consultar evidencia técnica](05-editor-controles.json). Los pasos y el resultado esperado están en la fila D01 del [informe](informe-taller.md).
+![Ficha de evidencia D01](verificacion/D01.png)
+
+[Datos completos](verificacion/editor.json) · [HTML de la ficha](verificacion/D01.html)
 
 ### D02
 
-**Fecha y hora de publicación sin identificación accesible.**
+**Fecha y hora de publicación sin etiquetas accesibles**
 
-[Consultar evidencia técnica](06-ajustes-articulo.json). Los pasos y el resultado esperado están en la fila D02 del [informe](informe-taller.md).
+![Ficha de evidencia D02](verificacion/D02.png)
+
+[Datos completos](verificacion/articulo.json) · [HTML de la ficha](verificacion/D02.html)
 
 ### D03
 
-**Búsquedas de etiquetas y autores sin etiqueta accesible.**
+**Búsquedas de etiquetas y autores sin etiquetas accesibles**
 
-[Consultar evidencia técnica](06-ajustes-articulo.json). Los pasos y el resultado esperado están en la fila D03 del [informe](informe-taller.md).
+![Ficha de evidencia D03](verificacion/D03.png)
+
+[Datos completos](verificacion/articulo.json) · [HTML de la ficha](verificacion/D03.html)
 
 ### D04
 
-**Selector Post access sin nombre accesible.**
+**Selector Post access sin nombre accesible**
 
-[Consultar evidencia técnica](06-ajustes-articulo.json). Los pasos y el resultado esperado están en la fila D04 del [informe](informe-taller.md).
+![Ficha de evidencia D04](verificacion/D04.png)
+
+[Datos completos](verificacion/articulo.json) · [HTML de la ficha](verificacion/D04.html)
 
 ### D05
 
-**Casilla Feature this post sin nombre accesible.**
+**Casilla Feature this post sin nombre accesible**
 
-[Consultar evidencia técnica](06-ajustes-articulo.json). Los pasos y el resultado esperado están en la fila D05 del [informe](informe-taller.md).
+![Ficha de evidencia D05](verificacion/D05.png)
+
+[Datos completos](verificacion/articulo.json) · [HTML de la ficha](verificacion/D05.html)
 
 ### D06
 
-**Campo Labels del miembro sin nombre accesible.**
+**Campo Labels del miembro sin nombre accesible**
 
-[Consultar evidencia técnica](08-miembro-controles.json). Los pasos y el resultado esperado están en la fila D06 del [informe](informe-taller.md).
+![Ficha de evidencia D06](verificacion/D06.png)
+
+[Datos completos](verificacion/miembro.json) · [HTML de la ficha](verificacion/D06.html)
 
 ### D07
 
-**Casilla de suscripción del miembro con etiqueta vacía.**
+**Casilla de suscripción del miembro con etiqueta vacía**
 
-[Consultar evidencia técnica](08-miembro-controles.json). Los pasos y el resultado esperado están en la fila D07 del [informe](informe-taller.md).
+![Ficha de evidencia D07](verificacion/D07.png)
+
+[Datos completos](verificacion/miembro.json) · [HTML de la ficha](verificacion/D07.html)
 
 ### D08
 
-**Papeleras de navegación sin nombre accesible.**
+**Papeleras de navegación sin nombre accesible**
 
-[Consultar evidencia técnica](04-navegacion-controles.json). Los pasos y el resultado esperado están en la fila D08 del [informe](informe-taller.md).
+![Ficha de evidencia D08](verificacion/D08.png)
+
+[Datos completos](verificacion/navegacion.json) · [HTML de la ficha](verificacion/D08.html)
 
 ### D09
 
-**Interruptor de verificación de acceso sin nombre accesible.**
+**Interruptor de verificación de acceso sin nombre accesible**
 
-[Consultar evidencia técnica](03-ajustes-controles.json). Los pasos y el resultado esperado están en la fila D09 del [informe](informe-taller.md).
+![Ficha de evidencia D09](verificacion/D09.png)
+
+[Datos completos](verificacion/seguridad.json) · [HTML de la ficha](verificacion/D09.html)
 
 ### D10
 
-**Interruptor de newsletters sin nombre accesible.**
+**Interruptor Newsletter sending sin nombre accesible**
 
-[Consultar evidencia técnica](03-ajustes-controles.json). Los pasos y el resultado esperado están en la fila D10 del [informe](informe-taller.md).
+![Ficha de evidencia D10](verificacion/D10.png)
 
-## Vista de la publicación
+[Datos completos](verificacion/newsletter.json) · [HTML de la ficha](verificacion/D10.html)
 
-![Artículo de prueba publicado](01-publicacion.png)
-
-## Vista del menú de navegación
-
-![Menú configurado](04-navegacion.png)
-
-Las imágenes no contienen contraseñas ni códigos de verificación. El miembro mostrado usa una dirección ficticia example.test. No se publica la base de datos de Ghost ni sus registros privados.
+La captura de Security settings se recortó para excluir el correo personal del administrador. No se publican contraseñas, códigos de verificación ni la base de datos. La dirección del miembro ficticio usa example.test.
