@@ -1,0 +1,56 @@
+[
+  {
+    "ariaLabel": null,
+    "ariaLabelledby": null,
+    "html": "<button type=\"button\" role=\"switch\" aria-checked=\"false\" data-state=\"unchecked\" value=\"on\" class=\"data-[state=checked]:bg-black dark:data-[state=checked]:bg-green appearance-none rounded-full bg-grey-300 transition duration-100 dark:bg-grey-800 enabled:hover:cursor-pointer disabled:cursor-not-allowed disabled:opacity-40 enabled:group-hover:opacity-80  min-w-[28px] h-4 w-7  order-2\" id=\":r45:\"><span data-state=\"unchecked\" class=\" h-3 w-3 data-[state=checked]:translate-x-[14px] block translate-x-0.5 rounded-full bg-white transition-transform duration-100 will-change-transform\"></span></button>",
+    "title": ""
+  },
+  {
+    "ariaLabel": null,
+    "ariaLabelledby": null,
+    "html": "<button type=\"button\" role=\"switch\" aria-checked=\"true\" data-state=\"checked\" value=\"on\" class=\"data-[state=checked]:bg-black dark:data-[state=checked]:bg-green appearance-none rounded-full bg-grey-300 transition duration-100 dark:bg-grey-800 enabled:hover:cursor-pointer disabled:cursor-not-allowed disabled:opacity-40 enabled:group-hover:opacity-80  min-w-[28px] h-4 w-7  order-2\" id=\":r4b:\"><span data-state=\"checked\" class=\" h-3 w-3 data-[state=checked]:translate-x-[14px] block translate-x-0.5 rounded-full bg-white transition-transform duration-100 will-change-transform\"></span></button>",
+    "title": ""
+  },
+  {
+    "ariaLabel": null,
+    "ariaLabelledby": null,
+    "html": "<button type=\"button\" role=\"switch\" aria-checked=\"true\" data-state=\"checked\" value=\"on\" class=\"data-[state=checked]:bg-black dark:data-[state=checked]:bg-green appearance-none rounded-full bg-grey-300 transition duration-100 dark:bg-grey-800 enabled:hover:cursor-pointer disabled:cursor-not-allowed disabled:opacity-40 enabled:group-hover:opacity-80  min-w-[28px] h-4 w-7  order-2\" id=\":r4c:\"><span data-state=\"checked\" class=\" h-3 w-3 data-[state=checked]:translate-x-[14px] block translate-x-0.5 rounded-full bg-white transition-transform duration-100 will-change-transform\"></span></button>",
+    "title": ""
+  },
+  {
+    "ariaLabel": null,
+    "ariaLabelledby": null,
+    "html": "<button type=\"button\" role=\"switch\" aria-checked=\"true\" data-state=\"checked\" value=\"on\" class=\"data-[state=checked]:bg-black dark:data-[state=checked]:bg-green appearance-none rounded-full bg-grey-300 transition duration-100 dark:bg-grey-800 enabled:hover:cursor-pointer disabled:cursor-not-allowed disabled:opacity-40 enabled:group-hover:opacity-80  min-w-[28px] h-4 w-7  order-2\" id=\":r4d:\"><span data-state=\"checked\" class=\" h-3 w-3 data-[state=checked]:translate-x-[14px] block translate-x-0.5 rounded-full bg-white transition-transform duration-100 will-change-transform\"></span></button>",
+    "title": ""
+  },
+  {
+    "ariaLabel": null,
+    "ariaLabelledby": null,
+    "html": "<button type=\"button\" role=\"switch\" aria-checked=\"true\" data-state=\"checked\" value=\"on\" class=\"data-[state=checked]:bg-black dark:data-[state=checked]:bg-green appearance-none rounded-full bg-grey-300 transition duration-100 dark:bg-grey-800 enabled:hover:cursor-pointer disabled:cursor-not-allowed disabled:opacity-40 enabled:group-hover:opacity-80  min-w-[28px] h-4 w-7  order-2\" id=\":r4e:\"><span data-state=\"checked\" class=\" h-3 w-3 data-[state=checked]:translate-x-[14px] block translate-x-0.5 rounded-full bg-white transition-transform duration-100 will-change-transform\"></span></button>",
+    "title": ""
+  },
+  {
+    "ariaLabel": null,
+    "ariaLabelledby": null,
+    "html": "<button type=\"button\" role=\"switch\" aria-checked=\"true\" data-state=\"checked\" value=\"on\" class=\"data-[state=checked]:bg-black dark:data-[state=checked]:bg-green appearance-none rounded-full bg-grey-300 transition duration-100 dark:bg-grey-800 enabled:hover:cursor-pointer disabled:cursor-not-allowed disabled:opacity-40 enabled:group-hover:opacity-80  min-w-[28px] h-4 w-7  order-2\" id=\":r4k:\"><span data-state=\"checked\" class=\" h-3 w-3 data-[state=checked]:translate-x-[14px] block translate-x-0.5 rounded-full bg-white transition-transform duration-100 will-change-transform\"></span></button>",
+    "title": ""
+  },
+  {
+    "ariaLabel": null,
+    "ariaLabelledby": null,
+    "html": "<button class=\"cursor-pointer text-grey-900 dark:text-white dark:hover:bg-grey-900 hover:bg-grey-200 hover:text-black inline-flex items-center justify-center whitespace-nowrap rounded text-sm transition font-semibold h-7 px-3 mt-1 self-center\" type=\"button\"><svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke-width=\"1.5\" class=\"pointer-events-none size-4 dark:text-white \"><path stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M18.0576 22.3846H5.94219C5.48317 22.3846 5.04294 22.2023 4.71836 21.8777C4.39377 21.5531 4.21143 21.1129 4.21143 20.6538V5.07692H19.7883V20.6538C19.7883 21.1129 19.606 21.5531 19.2814 21.8777C18.9568 22.2023 18.5166 22.3846 18.0576 22.3846Z\"></path><path stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M9.40381 17.1923V10.2692\"></path><path stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M14.5962 17.1923V10.2692\"></path><path stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M0.75 5.07692H23.25\"></path><path stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M14.5962 1.61539H9.40386C8.94484 1.61539 8.50461 1.79774 8.18003 2.12232C7.85544 2.4469 7.6731 2.88713 7.6731 3.34616V5.07693H16.3269V3.34616C16.3269 2.88713 16.1446 2.4469 15.82 2.12232C15.4954 1.79774 15.0552 1.61539 14.5962 1.61539Z\"></path></svg><span class=\"\"></span></button>",
+    "title": ""
+  },
+  {
+    "ariaLabel": null,
+    "ariaLabelledby": null,
+    "html": "<button class=\"cursor-pointer text-grey-900 dark:text-white dark:hover:bg-grey-900 hover:bg-grey-200 hover:text-black inline-flex items-center justify-center whitespace-nowrap rounded text-sm transition font-semibold h-7 px-3 mt-1 self-center\" type=\"button\"><svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke-width=\"1.5\" class=\"pointer-events-none size-4 dark:text-white \"><path stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M18.0576 22.3846H5.94219C5.48317 22.3846 5.04294 22.2023 4.71836 21.8777C4.39377 21.5531 4.21143 21.1129 4.21143 20.6538V5.07692H19.7883V20.6538C19.7883 21.1129 19.606 21.5531 19.2814 21.8777C18.9568 22.2023 18.5166 22.3846 18.0576 22.3846Z\"></path><path stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M9.40381 17.1923V10.2692\"></path><path stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M14.5962 17.1923V10.2692\"></path><path stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M0.75 5.07692H23.25\"></path><path stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M14.5962 1.61539H9.40386C8.94484 1.61539 8.50461 1.79774 8.18003 2.12232C7.85544 2.4469 7.6731 2.88713 7.6731 3.34616V5.07693H16.3269V3.34616C16.3269 2.88713 16.1446 2.4469 15.82 2.12232C15.4954 1.79774 15.0552 1.61539 14.5962 1.61539Z\"></path></svg><span class=\"\"></span></button>",
+    "title": ""
+  },
+  {
+    "ariaLabel": null,
+    "ariaLabelledby": null,
+    "html": "<button class=\"cursor-pointer text-grey-900 dark:text-white dark:hover:bg-grey-900 hover:bg-grey-200 hover:text-black inline-flex items-center justify-center whitespace-nowrap rounded text-sm transition font-semibold h-7 px-3 mt-1 self-center\" type=\"button\"><svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke-width=\"1.5\" class=\"pointer-events-none size-4 dark:text-white \"><path stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M18.0576 22.3846H5.94219C5.48317 22.3846 5.04294 22.2023 4.71836 21.8777C4.39377 21.5531 4.21143 21.1129 4.21143 20.6538V5.07692H19.7883V20.6538C19.7883 21.1129 19.606 21.5531 19.2814 21.8777C18.9568 22.2023 18.5166 22.3846 18.0576 22.3846Z\"></path><path stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M9.40381 17.1923V10.2692\"></path><path stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M14.5962 17.1923V10.2692\"></path><path stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M0.75 5.07692H23.25\"></path><path stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M14.5962 1.61539H9.40386C8.94484 1.61539 8.50461 1.79774 8.18003 2.12232C7.85544 2.4469 7.6731 2.88713 7.6731 3.34616V5.07693H16.3269V3.34616C16.3269 2.88713 16.1446 2.4469 15.82 2.12232C15.4954 1.79774 15.0552 1.61539 14.5962 1.61539Z\"></path></svg><span class=\"\"></span></button>",
+    "title": ""
+  }
+]

@@ -1,0 +1,86 @@
+[
+  {
+    "ariaLabel": null,
+    "ariaLabelledby": null,
+    "html": "<input id=\"fileInput-ember419\" class=\"x-file--input\" accept=\"image/gif,image/jpg,image/jpeg,image/png,image/svg+xml,image/webp\" type=\"file\">",
+    "id": "fileInput-ember419",
+    "labels": [
+      "\n            Upload\n    "
+    ],
+    "role": null,
+    "tag": "INPUT",
+    "type": "file"
+  },
+  {
+    "ariaLabel": null,
+    "ariaLabelledby": null,
+    "html": "<input name=\"post-setting-slug\" id=\"url\" class=\"post-setting-slug gh-input-x ember-text-field gh-input ember-view\" type=\"text\">",
+    "id": "url",
+    "labels": [
+      "Post URL"
+    ],
+    "role": null,
+    "tag": "INPUT",
+    "type": "text"
+  },
+  {
+    "ariaLabel": null,
+    "ariaLabelledby": null,
+    "html": "<input placeholder=\"YYYY-MM-DD\" data-test-date-time-picker-date-input=\"\" type=\"text\">",
+    "id": "",
+    "labels": [],
+    "role": null,
+    "tag": "INPUT",
+    "type": "text"
+  },
+  {
+    "ariaLabel": null,
+    "ariaLabelledby": null,
+    "html": "<input data-test-date-time-picker-time-input=\"\" type=\"text\">",
+    "id": "",
+    "labels": [],
+    "role": null,
+    "tag": "INPUT",
+    "type": "text"
+  },
+  {
+    "ariaLabel": null,
+    "ariaLabelledby": null,
+    "html": "<input class=\"ember-power-select-trigger-multiple-input\" autocomplete=\"off\" autocorrect=\"off\" autocapitalize=\"off\" spellcheck=\"false\" id=\"ember-power-select-trigger-multiple-input-ember429\" aria-controls=\"ember-power-select-options-ember429\" style=\"width: 25px\" placeholder=\"\" type=\"search\">",
+    "id": "ember-power-select-trigger-multiple-input-ember429",
+    "labels": [],
+    "role": null,
+    "tag": "INPUT",
+    "type": "search"
+  },
+  {
+    "ariaLabel": null,
+    "ariaLabelledby": null,
+    "html": "<select data-test-select=\"post-visibility\" optiontargetpath=\"name\" id=\"ember433\" class=\"ember-view\"><!---->      <option value=\"public\">\n    Public\n</option>\n\n      <option value=\"members\">\n    Members only\n</option>\n\n      <option value=\"paid\">\n    Paid-members only\n</option>\n\n      <option value=\"tiers\">\n    Specific tier(s)\n</option>\n\n</select>",
+    "id": "ember433",
+    "labels": [],
+    "role": null,
+    "tag": "SELECT",
+    "type": "select-one"
+  },
+  {
+    "ariaLabel": null,
+    "ariaLabelledby": null,
+    "html": "<input class=\"ember-power-select-trigger-multiple-input\" autocomplete=\"off\" autocorrect=\"off\" autocapitalize=\"off\" spellcheck=\"false\" id=\"ember-power-select-trigger-multiple-input-ember439\" aria-controls=\"ember-power-select-options-ember439\" style=\"width: 25px\" placeholder=\"\" type=\"search\">",
+    "id": "ember-power-select-trigger-multiple-input-ember439",
+    "labels": [],
+    "role": null,
+    "tag": "INPUT",
+    "type": "search"
+  },
+  {
+    "ariaLabel": null,
+    "ariaLabelledby": null,
+    "html": "<input class=\"gh-input post-settings-featured gh-input-x\" data-test-checkbox=\"featured\" type=\"checkbox\">",
+    "id": "",
+    "labels": [],
+    "role": null,
+    "tag": "INPUT",
+    "type": "checkbox"
+  }
+]
