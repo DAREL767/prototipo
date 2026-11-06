@@ -1,0 +1,6 @@
+{
+  "name": "pubsub-pedidos", "version": "1.0.0", "private": true,
+  "type": "module",
+  "scripts": {"start": "node server.js", "demo": "node server.js --demo", "test": "node --test"},
+  "dependencies": {"kafkajs": "2.2.4"}
+}

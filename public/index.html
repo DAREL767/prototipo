@@ -1,0 +1,8 @@
+<!doctype html>
+<html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Un pedido, varias reacciones</title><link rel="stylesheet" href="/style.css"></head>
+<body><main><header><span class="eyebrow">DEMOSTRACIÓN · PUB-SUB</span><h1>Un pedido.<br><span>Varias reacciones.</span></h1><p>Publica una vez. Cada servicio trabaja por su cuenta.</p><span id="status" class="badge">Conectando…</span></header>
+<section class="guide"><b>Prueba el flujo</b><span>1. Crea un pedido</span><span>2. Pausa analítica</span><span>3. Crea más pedidos</span><span>4. Reanuda y observa</span></section>
+<div class="layout"><section class="card"><span class="eyebrow">01 · PRODUCTOR</span><h2>Nuevo pedido</h2><p>La tienda publica el evento <b>PedidoCreado</b>.</p><form id="order"><label>Cliente<input name="customer" value="María" maxlength="80" required></label><label>Total en COP<input name="total" type="number" value="45000" min="1" max="100000000" step="1" required></label><button id="publish">Crear y publicar pedido →</button></form><p id="error" role="alert"></p></section>
+<section class="card"><span class="eyebrow">02 · INTERMEDIARIO</span><h2>Tema: pedidos</h2><p>Un mismo evento está disponible para ambos grupos.</p><div class="metric" id="published">0</div><small>eventos publicados en esta sesión</small><div id="events" class="list"></div></section></div>
+<div class="arrow">↓ Un evento · dos grupos independientes ↓</div><div class="layout" id="consumers"></div>
+<footer>Las notificaciones son registros de demostración: no se envían correos. Pausar suspende la lectura del consumidor; no apaga el servidor.</footer></main><script type="module" src="/app.js"></script></body></html>
